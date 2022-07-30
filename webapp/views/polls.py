@@ -28,7 +28,6 @@ class CreatePoll(CreateView):
     def form_valid(self, form):
         poll = form.save(commit=False)
         poll.save()
-        # form.save()
         return redirect("PollView", pk=poll.pk)
 
 

@@ -1,5 +1,5 @@
 from django.urls import path
-from django.views.generic import RedirectView
+
 
 from webapp.views import IndexView, PollView, CreatePoll, UpdatePoll, DeletePoll
 from webapp.views.choices import CreateAnswerView, UpdateAnswer, DeleteAnswer

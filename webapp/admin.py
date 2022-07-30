@@ -12,6 +12,6 @@ class PollAdmin(admin.ModelAdmin):
     fields = ['question', 'created_time', 'updated_time']
     readonly_fields = ['created_time', 'updated_time']
 
-# admin.site.register(Tag)
+
 admin.site.register(Choice)
 admin.site.register(Poll, PollAdmin)
