@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url "CreatePoll" %}">Создать опрос</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url "UpdatePoll" poll.pk %}">Редактировать опрос</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url "DeletePoll" poll.pk %}">Удалить опрос</a>
+    </li>
+
+{% endblock %}
+
+{% block content %}
+
+    <h1>Информация об опросе:</h1>
+    <p>
+        <b>Текст опроса:</b>
+        {{ poll.question }}
+    </p>
+    <p>
+        <b>Дата и время создания:</b>
+        {{ poll.created_time }}
+    </p>
+    <p>
+        <b>Дата и время изменения:</b>
+        {{ poll.updated_time }}
+    </p>
+
+
+    <br>
+    <a href="{% url "index" %}">На главную</a>
+
+{% endblock %}
