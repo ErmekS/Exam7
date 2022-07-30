@@ -13,5 +13,4 @@ urlpatterns = [
     path('poll/<int:pk>/choice/add/', CreateAnswerView.as_view(), name="PollCreateAnswer"),
     path('answer/<int:pk>/update/', UpdateAnswer.as_view(), name="UpdateAnswer"),
     path('answer/<int:pk>/delete/', DeleteAnswer.as_view(), name="DeleteAnswer"),
-
 ]
