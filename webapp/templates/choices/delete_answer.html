@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Удаление ответа{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+{% csrf_token %}
+    <h2>Вы уверены что хотите удалить ответ {{ choice.variant_text}}?</h2>
+    <button type="submit">Да</button>
+</form>
+   <button type="submit"><a href="{% url "PollView" object.poll.pk%}">Нет</a></button>
+{% endblock %}
